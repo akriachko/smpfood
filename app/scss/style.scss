@@ -16,7 +16,11 @@
 .logo {
 	margin-right: 516px;
 	transition: opacity 0.3s linear;
-	
+
+	&--footer {
+		margin: 0 0 30px 0;
+	}
+
 	&:focus {
 		background-color: rgba(255, 255, 255, 0.01);
 		box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
@@ -63,7 +67,7 @@
 	&__link {
 		color: $dark;
 		font-size: 18px;
-		transition: color 0.2s linear, text-shadow 0.3s linear, color 0.3s linear;
+		transition: color 0.3s linear, text-shadow 0.3s linear;
 
 		&--orange {
 			color: $orange;
@@ -163,6 +167,7 @@
 }
 
 .main {
+	flex-grow: 1;
 }
 
 .hero {
@@ -248,7 +253,7 @@
 			}
 
 		&__background {
-			background-image: url('../images/bg/scooter-guy.svg');
+			
 			background-repeat: no-repeat;
 			background-size: contain;
 			width: 560px;
@@ -256,6 +261,285 @@
 			margin-bottom: 120px;
 		}
 }
+
+.footer {
+}
+
+.footer-top {
+	display: flex;
+
+		&__form {	
+		}
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			
+			&:not(:last-child) {
+				margin-right: 72px;
+			}
+
+		}
+
+		&__list {
+			
+			&:not(:last-child) {
+				margin-bottom: 13px;
+			}
+
+		}
+
+		&__link {
+			font-size: 18px;
+			line-height: 1.3;
+			color: $dark;
+			transition: color 0.3s linear, text-shadow 0.3s linear;
+
+			&:focus {
+				background-color: rgba(255, 255, 255, 0.01);
+				box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+				border-radius: 5px;
+				outline: 0;
+			}
+	
+			&:hover {
+				color: $orange;
+			}
+		
+			&:active {
+				color: $dark;
+				text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+				box-shadow: 0px 0px 0px 0px;
+			}
+			
+			&--location {
+				position: relative;
+				
+
+				&::before {
+					content: "";
+					mask-image: url('../images/sprite.svg#icon-location');
+					position: absolute;
+					top: 0;
+					left: -30px;
+					mask-size: contain;
+					mask-position: center;
+					mask-repeat: no-repeat;
+					width: 24px;
+					height: 24px;
+					background-color: $darkBlue;
+					transition: color 0.3s linear, text-shadow 0.3s linear, background-color 0.3s linear;
+				}
+
+				&:hover::before {
+					background-color: $orange;
+				}
+
+				&:active::before {
+					background-color: $dark;
+					text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+					box-shadow: 0px 0px 0px 0px;
+				}
+
+			}
+
+			&--tel {
+				position: relative;
+
+				&::before {
+					content: "";
+					mask-image: url('../images/sprite.svg#icon-call');
+					position: absolute;
+					top: 4px;
+					left: -30px;
+					mask-size: contain;
+					mask-position: center;
+					mask-repeat: no-repeat;
+					width: 24px;
+					height: 24px;
+					background-color: $darkBlue;
+				}
+
+				&:hover::before {
+					background-color: $orange;
+				}
+
+				&:active::before {
+					background-color: $dark;
+					text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+					box-shadow: 0px 0px 0px 0px;
+				}
+			}
+
+			&--mail {
+				position: relative;
+				margin-bottom: 15px;
+
+				&::before {
+					content: "";
+					mask-image: url('../images/sprite.svg#icon-message');
+					position: absolute;
+					top: 4px;
+					left: -30px;
+					mask-size: contain;
+					mask-position: center;
+					mask-repeat: no-repeat;
+					width: 24px;
+					height: 24px;
+					background-color: $darkBlue;
+				}
+
+				&:hover::before {
+					background-color: $orange;
+				}
+
+				&:active::before {
+					background-color: $dark;
+					text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+					box-shadow: 0px 0px 0px 0px;
+				}
+			}
+
+		}
+
+		&__wrap {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+		}
+
+		&__mail {
+			display: block;
+			background: #FFFFFF;
+			border: 1px solid #C2C2C2;
+			border-radius: 5px;
+			outline: 0;
+			width: 200px;
+			height: 44px;
+			margin-bottom: 12px;
+			transition: box-shadow 0.3s linear;
+			
+			&::placeholder {
+				font-size: 14px;
+				line-height: 1.3;
+				color: #c2c2c2b2;
+				padding: 13px 0 13px 15px;
+				transition: color 0.3s linear;
+			}
+
+			&:hover::placeholder {
+				color: $darkBlue;
+			}
+
+			&:focus {
+				box-shadow: 0px 0px 0px 2px #FF6838;
+				outline: 0;
+			}
+
+		}
+		
+}
+
+.social-icon {
+	display: flex;
+	position: absolute;
+	top: 136px;
+	left: -29px;
+
+
+	&__link {
+		position: relative;
+		display: block;
+		width: 39px;
+		height: 39px;
+		border-radius: 50%;
+		background-color: $silver-200;
+		transition: background-color 1s, outline .5s;
+		
+
+		&:not(:last-child) {
+			margin-right: 13px;
+		}
+		
+		&::before {
+			content: "";
+			position: absolute;
+			left: 11px;
+			top: 10px;
+			width: 19px;
+			height: 19px;
+			background-color: $darkBlue;
+			transition: background-color .6s;
+		}
+
+		&--fb {
+			&::before {
+				mask-image: url('../images/sprite.svg#icon-facebook');
+			}
+		}
+
+		&--twit {
+			&::before {
+				mask-image: url('../images/sprite.svg#icon-twitter');
+			}
+		}
+
+		&--inst {
+			&::before {
+				mask-image: url('../images/sprite.svg#icon-instagram');
+			}
+		}
+
+		&:focus {
+			background-color: rgba($orange, 0.1);
+			box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+			outline: 0;
+		}
+
+		&:hover {
+			background-color: $orange-hv;	
+		}
+
+		&:hover::before {
+			background-color: #FFFFFF;
+		}
+
+		&:active {
+			background-color:  rgba($orange, 0.1);
+			box-shadow: 0px 0px 0px 0px rgba(255, 103, 56, 0);
+		}
+
+		&:active::before {
+			background-color: $orange;
+		}
+	}
+		
+}
+
+.footer__bottom {
+	padding: 30px 0;
+	position: relative;
+	
+	p {
+		font-size: 14px;
+		line-height: 1;
+		color: $dark;
+		text-align: center;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			display: block;
+			height: 1px;
+			width: 100%;
+			background-color: rgba($gray, 0.2);
+
+		}
+	}
+}
+
+
 
 @import 'media';
 
