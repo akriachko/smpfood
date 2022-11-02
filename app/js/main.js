@@ -1,5 +1,12 @@
 $(function () {
 
+	$('.feedback__inner').slick({
+		dots: true,
+		speed: 1500
+
+	});
+
+
 	var mixer = mixitup('.popular__cards');
 
 	$(window).scroll(function () {
@@ -14,7 +21,7 @@ $(function () {
 		e.preventDefault();
 		var id = $(this).attr('href'),
 			top = $(id).offset().top;
-		$('body,html').animate({ scrollTop: top }, 1500);
+		$('body,html').animate({ scrollTop: top }, 1300);
 	});
 
 

@@ -1,0 +1,243 @@
+.feedback {
+	padding-bottom: 130px;
+
+	&__inner {
+
+		.slick-prev {
+			position: absolute;
+			padding: 0;
+			font-size: 0;
+			width: 37px;
+			height: 37px;
+			top: 346px;
+			left: 474px;
+			z-index: 9;
+			background-color: rgba(255, 255, 255, 0.01);
+			border: 3px solid $gray;
+			border-radius: 50%;
+			transition: background-color .3s linear, box-shadow .3s linear, border .3s linear;
+			&::before {
+				content: "";
+				position: absolute;
+				mask-image: url('../images/sprite.svg#icon-left');
+				mask-size: contain;
+				mask-position: center;
+				mask-repeat: no-repeat;
+				background-color: $gray;
+				width: 18px;
+				height: 18px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				transition: background-color .3s linear;
+			}
+
+			&:focus {
+				outline: 0;
+				background-color: rgba(172, 22, 22, 0.01);
+				box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+			}
+
+			&:hover {
+				background-color: #FFF2ED;
+				border: 3px solid #FFAE94;
+			}
+
+			&:active {
+				box-shadow: 0 0 0 0 transparent;
+				background-color: #FFF2ED;
+				border: 3px solid #FFF2ED;
+			}
+
+			&:hover::before {
+				background-color: #FFAE94;
+			}
+
+			&:active::before {
+				background-color: $orange-hv;
+			}
+			
+		}
+
+		.slick-next {
+			position: absolute;
+			padding: 0;
+			font-size: 0;
+			top: 347px;
+			left: 658px;
+			width: 37px;
+			height: 37px;
+			z-index: 9;	
+			background-color: rgba(255, 255, 255, 0.01);
+			border: 3px solid $gray;
+			border-radius: 50%;
+			transition: background-color .3s linear, box-shadow .3s linear, border .3s linear;
+			&::before {
+				content: "";
+				position: absolute;
+				mask-image: url('../images/sprite.svg#icon-right');
+				mask-size: contain;
+				mask-position: center;
+				mask-repeat: no-repeat;
+				background-color: $gray;
+				width: 18px;
+				height: 18px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				transition: background-color .3s linear;
+			}
+
+			&:focus {
+				outline: 0;
+				background-color: rgba(172, 22, 22, 0.01);
+				box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+			}
+
+			&:hover {
+				background-color: #FFF2ED;
+				border: 3px solid #FFAE94;
+			}
+
+			&:active {
+				box-shadow: 0 0 0 0 transparent;
+				background-color: #FFF2ED;
+				border: 3px solid #FFF2ED;
+			}
+
+			&:hover::before {
+				background-color: #FFAE94;
+			}
+
+			&:active::before {
+				background-color: $orange-hv;
+			}
+
+		}
+	
+		.slick-dots {
+			display: flex;
+			justify-content: center;
+			padding-left: 18px;
+
+			li {
+				button {
+					padding: 0;
+					font-size: 0;
+					background-color: transparent;
+					width: 16px;
+					height: 16px;
+					border-radius: 50%;
+					margin-right: 15px;
+					position: relative;
+					transition: background-color .3s, box-shadow .3s;
+					&::before {
+						content: "";
+						position: absolute;
+						width: 16px;
+						height: 16px;
+						border-radius: 50%;
+						background-color: $gray;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						transition: background-color .3s, box-shadow .3s;
+					}
+
+					&:hover {
+						background-color: #FFF2ED;
+						box-shadow: 0px 0px 0px 2px rgba(255, 122, 80, 0.7);
+					}
+
+					&:active{
+						box-shadow: 0px 0px 0px 0px transparent;
+					}
+
+					&:active::before {
+						background-color: #FFAE94;
+						box-shadow: 0px 0px 0px 0px transparent;
+					}
+				}
+
+				&.slick-active {
+					button {
+						&::before {
+							background-color: $orange;
+						}
+					}
+				}
+			}
+		}
+	
+	}
+
+	&__slider {
+		padding-left: 90px;
+		
+	}
+
+	&__slider-item {
+		display: flex;
+		margin-bottom: 44px;
+	}
+
+	&__images {
+		border-radius: 50%;
+		margin-right: 80px;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		blockquote {
+			font-style: italic;
+			margin-bottom: 30px;
+			position: relative;
+			max-width: 570px;
+			max-height: 150px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				mask-image: url('../images/sprite.svg#icon-quote-open');
+				mask-size: contain;
+				mask-position: center;
+				mask-repeat: no-repeat;
+				background-color: $gray;
+				top: 1;
+				left: -41px;
+				width: 24px;
+				height: 20px;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				mask-image: url('../images/sprite.svg#icon-quote-close');
+				mask-size: contain;
+				mask-position: center;
+				mask-repeat: no-repeat;
+				background-color: $gray;
+				top: 132px;
+				left: 585px;
+				width: 24px;
+				height: 20px;
+			}
+		}
+
+		cite {
+			font-style: normal;
+			color: $orange;
+			line-height: 1.3;
+			margin-bottom: 15px;
+		}
+
+		p {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 1.3;
+		}
+	}
+}

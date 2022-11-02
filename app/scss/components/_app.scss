@@ -1,0 +1,39 @@
+.app {
+	padding-bottom: 120px;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__content {
+		
+		p {
+			max-width: 538px;
+			color: rgba($dark, 0.9);
+			margin-bottom: 30px;
+		}
+	}
+
+	&__inner {
+		display: flex;
+	}
+
+	&__link {
+		margin-right: 30px;
+	}
+
+	&__store {
+	}
+
+	&__play {
+	}
+
+	&__background {
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 570px;
+		height: 380px;
+	}
+}

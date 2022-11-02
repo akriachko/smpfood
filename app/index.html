@@ -25,7 +25,7 @@
 				<nav class="menu">
 					<ul class="menu__list">
 						<li class="menu__item">
-							<a class="menu__link" href="#">Главная</a>
+							<a class="menu__link" href="#s1">Главная</a>
 						</li>
 						<li class="menu__item">
 							<a class="menu__link" href="#s2">Блюда</a>
@@ -37,7 +37,7 @@
 				</nav>
 
 				<div class="user-nav">
-					<button class="user-nav__btn user-nav__btn--search" type="but"></button>
+					<button class="user-nav__btn user-nav__btn--search" type="button"></button>
 					<span class="visually-hidden ">Поиск</span>
 					<button class="user-nav__btn user-nav__btn--basket" type="button"></button>
 					<span class="visually-hidden ">Корзина</span>
@@ -49,8 +49,9 @@
 	</header>
 
 
-	<main class="main">
-		<section class="hero" id="s1">
+	<main class="main" id="s1">
+
+		<section class="hero">
 			<div class="container">
 				<div class="hero__wrapper">
 					<div class="hero__content">
@@ -70,7 +71,7 @@
 					</div>
 					<div class="hero__background" style="background-image: url('../images/bg/scooter-guy.svg');"></div>
 				</div>
-				<h2 class="title" id="s2">Популярные категории </h2>
+				<h2 class="title" id="s2">Популярные категории</h2>
 
 
 			</div>
@@ -78,31 +79,32 @@
 
 		<section class="popular">
 			<div class="container">
+				<h2 class="visually-hidden">Популярные категории</h2>
 				<nav class="popular__navi">
 					<ul class="popular__item">
 						<li class="popular__btn">
 							<button class="button-icon" data-filter=".category-burgers">Бургеры
-								<div class="button-icon__burgers"></div>
+								<span class="button-icon__burgers"></span>
 							</button>
 						</li>
 						<li class="popular__btn">
 							<button class="button-icon" data-filter=".category-pizza">Пицца
-								<div class="button-icon__pizza"></div>
+								<span class="button-icon__pizza"></span>
 							</button>
 						</li>
 						<li class="popular__btn">
 							<button class="button-icon" data-filter="#">Сендвичи
-								<div class="button-icon__sandwich"></div>
+								<span class="button-icon__sandwich"></span>
 							</button>
 						</li>
 						<li class="popular__btn">
 							<button class="button-icon" data-filter="#">Азиатская кухня
-								<div class="button-icon__asian"></div>
+								<span class="button-icon__asian"></span>
 							</button>
 						</li>
 						<li class="popular__btn">
 							<button class="button-icon" data-filter="#">Cеты
-								<div class="button-icon__sets"></div>
+								<span class="button-icon__sets"></span>
 							</button>
 						</li>
 					</ul>
@@ -231,14 +233,223 @@
 
 				</ul>
 
-				<div class="popular__link">
-					<a class="underline-link" href="#">
-						Показать еще
-					</a>
+				<button class="underline-button" type="button">
+					Показать еще
+				</button>
+
+			</div>
+		</section>
+
+		<section class="features">
+			<div class="container">
+				<div class="features__wrapper">
+					<div class="features__background" style="background-image: url('../../images/bg/food-delivery.png');">
+					</div>
+					<div class="features__flex">
+						<h2 class="title title--start">Оставайтесь дома,а мы позаботимся о еде
+						</h2>
+						<div class="features__text">
+							<p>У нас есть вкусная еда и мы готовы доставить её к вам домой! Воспользуйтесь нашей доставкой
+								прямо
+								сейчас и получите скиидку!
+							</p>
+						</div>
+
+						<div class="features__inner">
+							<span class="features__info features__info--icon-1">Быстрая доставка за 15 минут</span>
+							<span class="features__info features__info--icon-2">Вежливые курьеры</span>
+							<span class="features__info features__info--icon-3">Более 500 заведений</span>
+
+						</div>
+						<button class="button button--features" type="button">Подробнее</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="restorant">
+			<div class="container">
+				<h2 class="title title--mb">Лучшие рестораны</h2>
+
+				<ul class="restorant__cards">
+					<li class="restorant__item-cards">
+						<article class="business-card">
+							<a class="business-card__link" href="#">
+								<img class="business-card__image" src="images/cards/business-card-1.jpg" alt="Blaze Pizza"
+									width="370" height="300">
+								<h3>Blaze Pizza</h3>
+							</a>
+							<div class="business-card__inner">
+								<span>11:00 - 22:00</span>
+								<a class="button button--business-card" href="#"></a>
+							</div>
+						</article>
+					</li>
+					<li class="restorant__item-cards ">
+						<article class="business-card">
+							<a class="business-card__link" href="#">
+								<img class="business-card__image" src="images/cards/business-card-2.jpg" alt="Pizza Runcho"
+									width="370" height="300">
+								<h3>Pizza Runcho</h3>
+							</a>
+							<div class="business-card__inner">
+								<span>12:00 - 21:00</span>
+								<a class="button button--business-card" href="#"></a>
+							</div>
+						</article>
+					</li>
+					<li class="restorant__item-cards ">
+						<article class="business-card">
+							<a class="business-card__link" href="#">
+								<img class="business-card__image" src="images/cards/business-card-3.jpg" alt="Pizza Hut"
+									width="370" height="300">
+								<h3>Pizza Hut</h3>
+							</a>
+							<div class="business-card__inner">
+								<span>11:00 - 22:00</span>
+								<a class="button button--business-card" href="#"></a>
+							</div>
+						</article>
+					</li>
+					<li class="restorant__item-cards ">
+						<article class="business-card">
+							<a class="business-card__link" href="#">
+								<img class="business-card__image" src="images/cards/business-card-4.jpg" alt="McDonald`s"
+									width="370" height="300">
+								<h3>McDonald`s</h3>
+							</a>
+							<div class="business-card__inner">
+								<span>06:00 - 23:00</span>
+								<a class="button button--business-card" href="#"></a>
+							</div>
+						</article>
+					</li>
+					<li class="restorant__item-cards ">
+						<article class="business-card">
+							<a class="business-card__link" href="#">
+								<img class="business-card__image" src="images/cards/business-card-5.jpg" alt="KFC" width="370"
+									height="300">
+								<h3>KFC</h3>
+							</a>
+							<div class="business-card__inner">
+								<span>06:00 - 23:30</span>
+								<a class="button button--business-card" href="#"></a>
+							</div>
+						</article>
+					</li>
+					<li class="restorant__item-cards ">
+						<article class="business-card">
+							<a class="business-card__link" href="#">
+								<img class="business-card__image" src="images/cards/business-card-6.jpg" alt="Star Burgers"
+									width="370" height="300">
+								<h3>Star Burgers</h3>
+							</a>
+							<div class="business-card__inner">
+								<span>09:00 - 21:00</span>
+								<a class="button button--business-card" href="#"></a>
+							</div>
+						</article>
+					</li>
+				</ul>
+
+			</div>
+		</section>
+
+		<section class="feedback ">
+			<div class="container">
+				<h2 class="title title--mb">Отзывы клиентов</h2>
+				<div class="feedback__inner">
+
+					<div class="feedback__slider">
+						<div class="feedback__slider-item">
+							<img class="feedback__images" src="images/feedback.png" alt="Girl" width="300" height="300">
+							<div class="feedback__content">
+								<blockquote>SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень
+									удобный сайт
+									и приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и
+									дарит
+									скидки на доставку - однозначно рекомендую!</blockquote>
+								<cite>Дарья</cite>
+								<p>Ценитель вкусной еды</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="feedback__slider">
+						<div class="feedback__slider-item">
+							<img class="feedback__images" src="images/feedback.png" alt="Girl" width="300" height="300">
+							<div class="feedback__content">
+								<blockquote>SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень
+									удобный сайт
+									и приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и
+									дарит
+									скидки на доставку - однозначно рекомендую!</blockquote>
+								<cite>Дарья</cite>
+								<p>Ценитель вкусной еды</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="feedback__slider">
+						<div class="feedback__slider-item">
+							<img class="feedback__images" src="images/feedback.png" alt="Girl" width="300" height="300">
+							<div class="feedback__content">
+								<blockquote>SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень
+									удобный сайт
+									и приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и
+									дарит
+									скидки на доставку - однозначно рекомендую!</blockquote>
+								<cite>Дарья</cite>
+								<p>Ценитель вкусной еды</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="feedback__slider">
+						<div class="feedback__slider-item">
+							<img class="feedback__images" src="images/feedback.png" alt="Girl" width="300" height="300">
+							<div class="feedback__content">
+								<blockquote>SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень
+									удобный сайт
+									и приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и
+									дарит
+									скидки на доставку - однозначно рекомендую!</blockquote>
+								<cite>Дарья</cite>
+								<p>Ценитель вкусной еды</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<section class="app">
+			<div class="container">
+				<div class="app__wrapper">
+
+					<div class="app__content">
+						<h2 class="title title--app">Скачайте мобильное приложение</h2>
+						<p>Рестораны, которые вы любите - в ваших руках. Устанавливайте приложение и заказывайте еду в любом
+							удобном месте. </p>
+						<div class="app__inner">
+							<a class="app__link" href="#">
+								<img class="app__store" src="images/app-store-btn.jpg" alt="App Store" width="120" height="40">
+							</a>
+							<a class="app__link" href="#">
+								<img class="app__play" src="images/google-play-btn.jpg" alt="Google Play" width="135"
+									height="40">
+							</a>
+						</div>
+					</div>
+
+					<div class="app__background" style="background-image: url('../images/bg/app-bg.jpg');"></div>
 				</div>
 
 			</div>
 		</section>
+
+
 	</main>
 
 	<footer class="footer" id="footer">
